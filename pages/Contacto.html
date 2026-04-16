@@ -1,20 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta author="PolacoMan">
+    <link rel="icon" href="../src/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;0,800;1,100;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../styles/style.css" />
-    <title>Contacto</title>
+    <title>Así Quedó - Contacto</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="div-logo">
-            <a class="logo" href="./index.html">LOGO</a>
+        <div class="divLogo">
+            <a class="logo" href="../index.html">
+                <span class="parteA">Así Quedó</span>
+                <span class="parteB">Ni siquiera lo intentamos.</span>
+            </a>
         </div>
-        <nav class="header-nav">
+        <nav class="navBar">
             <ul>
                 <li>
                     <a href="../index.html">Inicio</a>
@@ -28,19 +36,79 @@
     <main>
         <h1 class="titulo-contacto">Contactanos</h1>
 
-        <form class="form-contacto" action="" method="POST">
-            <div class="grupo-input">
-                <label for="email"> Your email: </label>
-                <input id="email" type="email" name="email" />
-            </div>
-            <div class="grupo-input">
-                <label for="mensaje"> Your message: </label>
-                <textarea id="mensaje" name="message"></textarea>
-            </div>
-            <button class="btn" type="submit">Send</button>
+        <p>Llená los campos necesarios para que podamos ayudarte... O decir que lo hicimos.</p>
+
+        <form action="https://formspree.io/f/mvzdkvaa" method="POST">
+            <label for="email">Mail:</label>
+            <input type="email" name="email" placeholder="Mail..." required>
+            <label for="name">Nombre (El tuyo, no inventes.):</label>
+            <input type="text" name="name" placeholder="Nombre..." required>
+            <label for="surname">Apellido:</label>
+            <input type="text" name="surname" placeholder="Apellido..." required>
+            <label for="age">Edad:</label>
+            <input type="number" name="age" placeholder="Edad..." required>
+            <label for = "direction">Dirección:</label>
+            <input type="text" name="direction" placeholder="Dirección..." required>
+            <label for="phone">Teléfono:</label>
+            <input type="tel" name="phone" placeholder="Número de teléfono..." required>
+            <label for = "identification">DNI:</label>
+            <input type="number" name="identification" placeholder="Número de documento..." required>
+            <label for = "lifeInsurance">¿Tenés seguro de vida?</label>
+            <select name="lifeInsurance" id="lifeInsurance" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="yes">Sí</option>
+                <option value="sometimes">A veces</option>
+                <option value="no">No</option>
+            </select>
+            <label for="typeOfBlood">Tipo de sangre</label>
+            <select name="typeOfBlood" id="typeOfBlood" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="deceased">No tengo sangre</option>
+            </select>
+            <label for="regret">¿Te vas a arrepentir?</label>
+            <select name="regret" id="regret" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="yes">Ya me arrepentí</option>
+                <option value="probably">Probablemente</option>
+                <option value="no">No</option>
+            </select>
+            <label for="alone">¿Vivís solo?</label>
+            <input type="radio" name="alone" id="alone-yes" value="yes" required>
+            <label for="alone-yes">Sí</label>
+            <input type="radio" name="alone" id="alone-no" value="no" required>
+            <label for="alone-no">No</label>
+            <label for="penalCharges">¿Tenés cargos penales en Andorra o Jamaica?</label>
+            <select name="penalCharges" id="penalCharges" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="yes">Sí</option>
+                <option value="probably">Probablemente</option>
+                <option value="no">No</option>
+                <option value="Andorra">Sólo en Andorra</option>
+                <option value="Jamaica">Sólo en Jamaica</option>
+            </select>
+            <label for = "knowMarkHamill">¿Conocés personalmente a Mark Hamill?</label>
+            <input type="radio" name="knowMarkHamill" id="knowMarkHamill-yes" value="yes" required>
+            <label for="knowMarkHamill-yes">Sí</label>
+            <input type="radio" name="knowMarkHamill" id="knowMarkHamill-no" value="no" required>
+            <label for="knowMarkHamill-no">No</label>
+            <input type="radio" name="knowMarkHamill" id="knowMarkHamill-moreThanYes" value="moreThanYes" required>
+            <label for="knowMarkHamill-moreThanYes">Lo conozco íntimamente 😉</label>
+            <label for="subject"> Asunto:</label>
+            <input type="text" name="subject" placeholder="No nos interesa" required>
+            <label for="reason">¿Por qué estás llenando esto?</label>
+            <input type="text" name="reason" placeholder="Cuánto tiempo libre tenés!" required>
+            <label for="message">Tu mensaje:</label>
+            <textarea id="message" name="message" placeholder="Poné lo que quieras, no lo vamos a leer."></textarea>
+            <button type="submit">Enviar (No garantiza nada)</button>
         </form>
-    </main>
-    <footer>
         <p>Sitio realizado por Belu para Talento Tech</p>
         <nav>
             <ul class="footer-list">
@@ -52,6 +120,7 @@
                 </li>
             </ul>
         </nav>
-    </footer>
+        </footer>
 </body>
+
 </html>
