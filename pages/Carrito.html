@@ -11,102 +11,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Así Quedó</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="divLogo">
-            <a class="logo" href="../index.html">
-                <span class="parteA">Así Quedó</span>
-                <span class="parteB">Ni siquiera lo intentamos.</span>
-            </a>
-        </div>
-        <nav class="navBar">
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./Contacto.html">Contacto</a>
-                </li>
-                <li>
-                    <a href=""><img class="icono" src="../src/carrito.png" alt="ícono del carrito"></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <h1>Éste es el carrito</h1>
         <h3>Por si no te das cuenta solo...</h3>
-        <section>
-            <p>Acá figura toda la porquería que querés comprar</p>
-            <div class="notes-container">
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-                <article class="note">
-                    <div class="imgContainer">
-                        <img/>
-                    </div>
-                    <h3></h3>
-                    <i></i>
-                    <p></p>
-                </article>
-            </div>
+
+        <section id="contenedor-carrito" class="notes-container">
+            <!-- Aquí se renderizarán los productos -->
+        </section>
+
+
+        <div id="acciones-carrito" class="acciones-carrito">
+        </div>
+
+        <section id="resumen-carrito">
+        <!-- Aca ira el resumen del carrito -->
         </section>
     </main>
     <footer>
@@ -136,6 +57,8 @@
         </div>
         <p class="footer-copy">Copyright © 2973 Así Quedó. Todos los derechos reservados.</p>
     </footer>
+    <script type="module" src="../scripts/carrito.js"></script>
+    <script type="module" src="../scripts/carritoUi.js"></script>
 </body>
 
 </html>
