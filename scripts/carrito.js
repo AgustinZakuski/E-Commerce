@@ -20,7 +20,7 @@ export const eliminarProducto = (indice) => {
     guardarCarrito(carrito);
 
     actualizarContador(carrito);
-    mostrarMensaje("Ahora te arrepentís? La próxima pensalo bien si lo querés antes de venir a complicarme la vida a mí!");
+    mostrarMensaje("Ahora te arrepentís? La próxima pensá bien si lo querés antes de venir a complicarme la vida a mí!");
 };
 
 export const vaciarCarrito = () => {
