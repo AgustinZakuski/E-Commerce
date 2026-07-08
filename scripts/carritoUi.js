@@ -29,14 +29,20 @@ const renderizarCarrito = () => {
     }
 
     carrito.forEach((producto, index) => {
-
         const tarjeta = crearTarjeta(producto, "carrito");
+        const imgTarjeta = tarjeta.querySelector(".noteImg");
+        if (imgTarjeta) {
+            const enPages = window.location.pathname.includes('/pages/');
+            const prefijo = enPages ? "../" : "./";
+            const rutaLimpia = producto.img.replace(/^\.\//, ""); 
+            imgTarjeta.src = `${prefijo}${rutaLimpia}`;
+        }
 
         tarjeta.querySelector(".btn-eliminar")
             .addEventListener("click", () => {
-            eliminarProducto(index);
-            renderizarCarrito();
-        });
+                eliminarProducto(index);
+                renderizarCarrito();
+            });
 
         contenedor.appendChild(tarjeta);
     });

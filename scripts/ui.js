@@ -55,7 +55,10 @@ export const crearTarjeta = (producto, context) => {
     return tarjeta;
 }
 
-export const crearHeader = () => {
+export const crearHeader = (cantidad) => {
+    const enPages = window.location.pathname.includes('/pages/');
+    const prefijo = enPages ? "../" : "./";
+
     const header = document.createElement("header");
 
     const divLogo = document.createElement("div");
@@ -63,7 +66,7 @@ export const crearHeader = () => {
 
     const linkLogo = document.createElement("a");
     linkLogo.classList.add("logo");
-    linkLogo.href = "/index.html";
+    linkLogo.href = `${prefijo}index.html`; 
 
     const parteA = document.createElement("span");
     parteA.classList.add("parteA");
@@ -84,29 +87,29 @@ export const crearHeader = () => {
 
     const liInicio = document.createElement("li");
     const linkInicio = document.createElement("a");
-    linkInicio.href = "/index.html";
+    linkInicio.href = `${prefijo}index.html`; 
     linkInicio.textContent = "Inicio";
     liInicio.appendChild(linkInicio);
 
     const liContacto = document.createElement("li");
     const linkContacto = document.createElement("a");
-    linkContacto.href = "/pages/Contacto.html";
+    linkContacto.href = `${prefijo}pages/Contacto.html`; 
     linkContacto.textContent = "Contacto";
     liContacto.appendChild(linkContacto);
 
     const liCarrito = document.createElement("li");
     const linkCarrito = document.createElement("a");
-    linkCarrito.href = "/pages/Carrito.html";
+    linkCarrito.href = `${prefijo}pages/Carrito.html`; 
 
     const imgCarrito = document.createElement("img");
     imgCarrito.classList.add("icono");
-    imgCarrito.src = "/src/carrito.png";
+    imgCarrito.src = `${prefijo}src/carrito.png`; 
     imgCarrito.alt = "ícono del carrito";
 
     const liContador = document.createElement("li");
     const spanContador = document.createElement("span");
     spanContador.id = "count";
-    spanContador.textContent = "";
+    spanContador.textContent = cantidad; 
 
     linkCarrito.appendChild(imgCarrito);
     liCarrito.appendChild(linkCarrito);
@@ -125,6 +128,9 @@ export const crearHeader = () => {
 };
 
 export const crearFooter = () => {
+    const enPages = window.location.pathname.includes('/pages/');
+    const prefijo = enPages ? "../" : "./";
+
     const footer = document.createElement("footer");
 
     const footerMain = document.createElement("div");
@@ -137,7 +143,7 @@ export const crearFooter = () => {
     pLogo.textContent = "Así Quedó ";
 
     const imgFavicon = document.createElement("img");
-    imgFavicon.src = "/src/favicon.png";
+    imgFavicon.src = `${prefijo}src/favicon.png`; 
     imgFavicon.alt = "logo de Así Quedó";
     imgFavicon.style.width = "30px";
     imgFavicon.style.height = "30px";
@@ -148,10 +154,10 @@ export const crearFooter = () => {
     ulRedes.classList.add("listaFoot");
 
     const redes = [
-        { alt: "logo de Whatsapp", src: "/src/whatsapp.png" },
-        { alt: "logo de mail", src: "/src/mail.png" },
-        { alt: "logo de Instagram", src: "/src/instagram.png" },
-        { alt: "logo de LinkedIn", src: "/src/linkedin.png" }
+        { alt: "logo de Whatsapp", src: "src/whatsapp.png" },
+        { alt: "logo de mail", src: "src/mail.png" },
+        { alt: "logo de Instagram", src: "src/instagram.png" },
+        { alt: "logo de LinkedIn", src: "src/linkedin.png" }
     ];
 
     redes.forEach(red => {
@@ -162,8 +168,7 @@ export const crearFooter = () => {
 
         const img = document.createElement("img");
         img.classList.add("icono");
-        img.src = red.src;
-        img.alt = red.alt;
+        img.src = `${prefijo}${red.src}`;
 
         a.appendChild(img);
         li.appendChild(a);
