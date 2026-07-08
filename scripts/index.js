@@ -1,9 +1,12 @@
 import { agregarAlCarrito } from "./carrito.js";
 import { getCarrito } from "./storage.js";
-import { actualizarContador, crearTarjeta, crearHeader } from "./ui.js";
+import { actualizarContador, crearTarjeta, crearHeader, crearFooter } from "./ui.js";
 
 const header = crearHeader();
 document.body.insertBefore(header, document.body.firstChild);
+
+const footer = crearFooter();
+document.body.appendChild(footer);
 
 const renderizarProductos = () => {
     const contenedor = document.getElementById("main-container");

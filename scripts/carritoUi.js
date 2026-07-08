@@ -1,9 +1,12 @@
-import { actualizarContador, mostrarMensaje, crearTarjeta, crearHeader } from "./ui.js";
+import { actualizarContador, mostrarMensaje, crearTarjeta, crearHeader, crearFooter } from "./ui.js";
 import { getCarrito } from "./storage.js";
 import { eliminarProducto, vaciarCarrito } from "./carrito.js";
 
 const header = crearHeader();
 document.body.insertBefore(header, document.body.firstChild);
+
+const footer = crearFooter();
+document.body.appendChild(footer);
 
 const renderizarCarrito = () => {
     console.log("Renderizando carrito");
@@ -39,7 +42,7 @@ const renderizarCarrito = () => {
     });
 
     const btnVaciar = document.createElement("button");
-    btnVaciar.classList.add("btn");
+    btnVaciar.classList.add("btnComprar");
     btnVaciar.classList.add("btn-vaciar-carrito");
     btnVaciar.textContent = "Vaciar carrito";
 

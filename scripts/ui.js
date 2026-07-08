@@ -123,3 +123,73 @@ export const crearHeader = () => {
 
     return header;
 };
+
+export const crearFooter = () => {
+    const footer = document.createElement("footer");
+
+    const footerMain = document.createElement("div");
+    footerMain.classList.add("footer-main");
+
+    const footerLeft = document.createElement("div");
+    footerLeft.classList.add("footer-left");
+
+    const pLogo = document.createElement("p");
+    pLogo.textContent = "Así Quedó ";
+
+    const imgFavicon = document.createElement("img");
+    imgFavicon.src = "/src/favicon.png";
+    imgFavicon.alt = "logo de Así Quedó";
+    imgFavicon.style.width = "30px";
+    imgFavicon.style.height = "30px";
+    pLogo.appendChild(imgFavicon);
+
+    const navRedes = document.createElement("nav");
+    const ulRedes = document.createElement("ul");
+    ulRedes.classList.add("listaFoot");
+
+    const redes = [
+        { alt: "logo de Whatsapp", src: "/src/whatsapp.png" },
+        { alt: "logo de mail", src: "/src/mail.png" },
+        { alt: "logo de Instagram", src: "/src/instagram.png" },
+        { alt: "logo de LinkedIn", src: "/src/linkedin.png" }
+    ];
+
+    redes.forEach(red => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = "https://social.mtdv.me/articles/NBUPvINyMH";
+        a.target = "_blank";
+
+        const img = document.createElement("img");
+        img.classList.add("icono");
+        img.src = red.src;
+        img.alt = red.alt;
+
+        a.appendChild(img);
+        li.appendChild(a);
+        ulRedes.appendChild(li);
+    });
+
+    navRedes.appendChild(ulRedes);
+    footerLeft.appendChild(pLogo);
+    footerLeft.appendChild(navRedes);
+
+    const footerRight = document.createElement("div");
+    footerRight.classList.add("footer-right");
+
+    const pTextoRight = document.createElement("p");
+    pTextoRight.textContent = "Éste es el footer. Si, llegaste al final.";
+    footerRight.appendChild(pTextoRight);
+
+    footerMain.appendChild(footerLeft);
+    footerMain.appendChild(footerRight);
+
+    const pCopy = document.createElement("p");
+    pCopy.classList.add("footer-copy");
+    pCopy.textContent = "Copyright © 2973 Así Quedó. Todos los derechos reservados.";
+
+    footer.appendChild(footerMain);
+    footer.appendChild(pCopy);
+
+    return footer;
+};
