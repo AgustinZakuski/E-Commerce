@@ -56,8 +56,8 @@ export const crearTarjeta = (producto, context) => {
 }
 
 export const crearHeader = (cantidad) => {
-    const enPages = window.location.pathname.includes('/pages/');
-    const prefijo = enPages ? "../" : "./";
+    const esGitHub = window.location.hostname.includes("github.io");
+    const BASE_URL = esGitHub ? "/E-Commerce/" : "/";
 
     const header = document.createElement("header");
 
@@ -66,7 +66,7 @@ export const crearHeader = (cantidad) => {
 
     const linkLogo = document.createElement("a");
     linkLogo.classList.add("logo");
-    linkLogo.href = `${prefijo}index.html`; 
+    linkLogo.href = `${BASE_URL}index.html`;
 
     const parteA = document.createElement("span");
     parteA.classList.add("parteA");
@@ -87,23 +87,23 @@ export const crearHeader = (cantidad) => {
 
     const liInicio = document.createElement("li");
     const linkInicio = document.createElement("a");
-    linkInicio.href = `${prefijo}index.html`; 
+    linkInicio.href = `${BASE_URL}index.html`;
     linkInicio.textContent = "Inicio";
     liInicio.appendChild(linkInicio);
 
     const liContacto = document.createElement("li");
     const linkContacto = document.createElement("a");
-    linkContacto.href = `${prefijo}pages/Contacto.html`; 
+    linkContacto.href = `${BASE_URL}pages/Contacto.html`;
     linkContacto.textContent = "Contacto";
     liContacto.appendChild(linkContacto);
 
     const liCarrito = document.createElement("li");
     const linkCarrito = document.createElement("a");
-    linkCarrito.href = `${prefijo}pages/Carrito.html`; 
+    linkCarrito.href = `${BASE_URL}pages/Carrito.html`;
 
     const imgCarrito = document.createElement("img");
     imgCarrito.classList.add("icono");
-    imgCarrito.src = `${prefijo}src/carrito.png`; 
+    imgCarrito.src = `${BASE_URL}src/carrito.png`;
     imgCarrito.alt = "ícono del carrito";
 
     const liContador = document.createElement("li");
@@ -127,9 +127,23 @@ export const crearHeader = (cantidad) => {
     return header;
 };
 
+export const actualizarContadorHeader = (nuevaCantidad) => {
+    const spanContador = document.getElementById("count");
+    if (!spanContador) return; 
+
+    const liContador = spanContador.parentElement;
+    spanContador.textContent = nuevaCantidad;
+
+    if (!nuevaCantidad || nuevaCantidad < 1) {
+        liContador.style.display = "none";
+    } else {
+        liContador.style.display = "inline-block";
+    }
+};
+
 export const crearFooter = () => {
-    const enPages = window.location.pathname.includes('/pages/');
-    const prefijo = enPages ? "../" : "./";
+    const esGitHub = window.location.hostname.includes("github.io");
+    const BASE_URL = esGitHub ? "/E-Commerce/" : "/";
 
     const footer = document.createElement("footer");
 
@@ -143,7 +157,7 @@ export const crearFooter = () => {
     pLogo.textContent = "Así Quedó ";
 
     const imgFavicon = document.createElement("img");
-    imgFavicon.src = `${prefijo}src/favicon.png`; 
+    imgFavicon.src = `${BASE_URL}src/favicon.png`;
     imgFavicon.alt = "logo de Así Quedó";
     imgFavicon.style.width = "30px";
     imgFavicon.style.height = "30px";
@@ -168,7 +182,7 @@ export const crearFooter = () => {
 
         const img = document.createElement("img");
         img.classList.add("icono");
-        img.src = `${prefijo}${red.src}`;
+        img.src = `${BASE_URL}${red.src}`;
 
         a.appendChild(img);
         li.appendChild(a);

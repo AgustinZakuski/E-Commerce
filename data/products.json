@@ -4,83 +4,83 @@
     "nombre": "Marcador gastado",
     "precio": 8.50,
     "desc": "Si apretás fuerte sirve... Casi.",
-    "img": "../src/productos/marcador.png"
+    "img": "src/productos/marcador.png"
   },
   {
     "id": 2,
     "nombre": "Reloj (funciona)",
     "precio": 13.753,
     "desc": "Marca la hora. No necesariamente la correcta.",
-    "img": "../src/productos/reloj.png"
+    "img": "src/productos/reloj.png"
   },
   {
     "id": 3,
     "nombre": "Marcador gastado",
     "precio": 327.01,
     "desc": "Si, el mismo marcador",
-    "img": "../src/productos/marcador.png"
+    "img": "src/productos/marcador.png"
   },
   {
     "id": 4,
     "nombre": "Cosa que hace ruido",
     "precio": 99.99,
     "desc": "Hace ruido. No se puede apagar. Extremadamente irritante.",
-    "img": "../src/productos/aparato.avif"
+    "img": "src/productos/aparato.avif"
   },
   {
     "id": 5,
     "nombre": "Cargador corto",
     "precio": 7.20,
     "desc": "Dicen que no importa.",
-    "img": "../src/productos/cargador.png"
+    "img": "src/productos/cargador.png"
   },
   {
     "id": 6,
     "nombre": "Pendrive (16 TB)",
     "precio": 40.96,
     "desc": "Está lleno. No sabemos de qué.",
-    "img": "../src/productos/pendrive.jpg"
+    "img": "src/productos/pendrive.jpg"
   },
   {
     "id": 7,
     "nombre": "Auricular",
     "precio": 12.00,
     "desc": "Uno anda... a veces.",
-    "img": "../src/productos/auricular.jpeg"
+    "img": "src/productos/auricular.jpeg"
   },
   {
     "id": 8,
     "nombre": "Teléfono celular (Casi nuevo)",
     "precio": 142.33,
     "desc": "Desgaste mínimo.",
-    "img": "../src/productos/celular.jpg"
+    "img": "src/productos/celular.jpg"
   },
   {
     "id": 9,
     "nombre": "Vela aromática",
     "precio": 28.50,
     "desc": "Con aroma a fracaso. ¿Te resulta familiar?",
-    "img": "../src/productos/vela.png"
+    "img": "src/productos/vela.png"
   },
   {
     "id": 10,
     "nombre": "Teclado",
     "precio": 57.00,
     "desc": "No todas funcionan igual.",
-    "img": "../src/productos/teclado.png"
+    "img": "src/productos/teclado.png"
   },
   {
     "id": 11,
     "nombre": "Calendario",
     "precio": 20.26,
     "desc": "No es mala racha, sos constante.",
-    "img": "../src/productos/calendario.jpeg"
+    "img": "src/productos/calendario.jpeg"
   },
   {
     "id": 12,
     "nombre": "Escombros domésticos",
     "precio": 317.42,
     "desc": "El manual se vende por separado. No lo tenemos.",
-    "img": "../src/productos/ceramica.avif"
+    "img": "src/productos/ceramica.avif"
   }
 ]
